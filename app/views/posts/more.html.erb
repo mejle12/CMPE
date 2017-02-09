@@ -1,0 +1,36 @@
+Hello World!
+
+<!--See below; This is how you comment in Ruby ERB -->
+<h1>More Information</h1>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Post ID</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Comment ID</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- @comments is passed from controller to view -->
+    <% @comments.each do |comment| %> <!-- for loop -->
+      <tr>
+        <td><%= comment.post.id %></td>     <!--get Post ID using reference -->
+        <td><%= comment.post.title %></td>  <!--get Post title using ref -->
+        <td><%= comment.post.content %></td>    <!--get Post content using ref -->
+        <td><%= comment.id %></td>      <!--get Comment ID -->
+        <td><%= comment.comment %></td>     <!--get Comment from Comment -->
+        <td><%= link_to 'Show Comment', comment %></td>
+        <td><%= link_to 'Edit Comment', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy Comment', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Post', comment.post %></td>
+        <td><%= link_to 'Edit Post', edit_post_path(comment.post) %></td>
+        <td><%= link_to 'Destroy Post', comment.post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
