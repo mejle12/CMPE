@@ -17,5 +17,20 @@
 		  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 	  <% end %>
 </p>
+
+<p>
+<% if @post.id == 2 %>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Div0iP65aZo" frameborder="0" allowfullscreen></iframe>
+<%end%>
+
+<% if @post.id == 1 %>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XkkzKHCx154" frameborder="0" allowfullscreen></iframe>
+<%end%>
+
+<% if @post.id == 3 %>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/84TouqfIsiI" frameborder="0" allowfullscreen></iframe>
+<%end%>
+</p>
+
 <%= commontator_thread(@post) %>
 <%= link_to 'Back', posts_path %>
