@@ -53,6 +53,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.0.4)
     dalli (2.7.6)
     debug_inspector (0.0.2)
@@ -170,6 +173,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
+  commontator (~> 4.11.1)
   dalli
   devise (~> 4.2)
   jbuilder (~> 2.5)

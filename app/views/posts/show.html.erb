@@ -17,5 +17,5 @@
 		  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 	  <% end %>
 </p>
-
+<%= commontator_thread(@post) %>
 <%= link_to 'Back', posts_path %>

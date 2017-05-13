@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'commontator', '~> 4.11.1'
 
 group :production do
   gem 'pg'
